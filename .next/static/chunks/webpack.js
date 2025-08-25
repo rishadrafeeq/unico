@@ -178,17 +178,10 @@
 /******/ 	
 /******/ 	/* webpack/runtime/get mini-css chunk filename */
 /******/ 	!function() {
-<<<<<<< HEAD
-/******/ 		// This function allow to reference all chunks
-/******/ 		__webpack_require__.miniCssF = function(chunkId) {
-/******/ 			// return url for filenames based on template
-/******/ 			return "static/css/" + chunkId + ".css";
-=======
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.miniCssF = function(chunkId) {
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
->>>>>>> c6926bc (Updated testimonial section UI)
 /******/ 		};
 /******/ 	}();
 /******/ 	
@@ -199,11 +192,7 @@
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	!function() {
-<<<<<<< HEAD
-/******/ 		__webpack_require__.h = function() { return "3ef74e81f3599db4"; }
-=======
-/******/ 		__webpack_require__.h = function() { return "9c2af23f41428137"; }
->>>>>>> c6926bc (Updated testimonial section UI)
+/******/ 		__webpack_require__.h = function() { return "1cbf6c8ef2ede5ad"; }
 /******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
@@ -248,10 +237,7 @@
 /******/ 					script.setAttribute("nonce", __webpack_require__.nc);
 /******/ 				}
 /******/ 				script.setAttribute("data-webpack", dataWebpackPrefix + key);
-<<<<<<< HEAD
-=======
 /******/ 		
->>>>>>> c6926bc (Updated testimonial section UI)
 /******/ 				script.src = __webpack_require__.tu(url);
 /******/ 			}
 /******/ 			inProgress[url] = [done];
@@ -341,10 +327,6 @@
 /******/ 		var currentUpdateApplyHandlers;
 /******/ 		var queuedInvalidatedModules;
 /******/ 		
-<<<<<<< HEAD
-/******/ 		// eslint-disable-next-line no-unused-vars
-=======
->>>>>>> c6926bc (Updated testimonial section UI)
 /******/ 		__webpack_require__.hmrD = currentModuleData;
 /******/ 		
 /******/ 		__webpack_require__.i.push(function (options) {
@@ -405,13 +387,8 @@
 /******/ 					Object.defineProperty(fn, name, createPropertyDescriptor(name));
 /******/ 				}
 /******/ 			}
-<<<<<<< HEAD
-/******/ 			fn.e = function (chunkId) {
-/******/ 				return trackBlockingPromise(require.e(chunkId));
-=======
 /******/ 			fn.e = function (chunkId, fetchPriority) {
 /******/ 				return trackBlockingPromise(require.e(chunkId, fetchPriority));
->>>>>>> c6926bc (Updated testimonial section UI)
 /******/ 			};
 /******/ 			return fn;
 /******/ 		}
@@ -603,12 +580,7 @@
 /******/ 									updatedModules
 /******/ 								);
 /******/ 								return promises;
-<<<<<<< HEAD
-/******/ 							},
-/******/ 							[])
-=======
 /******/ 							}, [])
->>>>>>> c6926bc (Updated testimonial section UI)
 /******/ 						).then(function () {
 /******/ 							return waitForBlockingPromises(function () {
 /******/ 								if (applyOnUpdate) {

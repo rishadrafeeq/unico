@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-// File: C:\Users\risha\OneDrive\Desktop\unico\app\layout.tsx
-=======
 // File: C:\Users\risha\OneDrive\Desktop\Project\uni\app\layout.tsx
->>>>>>> c6926bc (Updated testimonial section UI)
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

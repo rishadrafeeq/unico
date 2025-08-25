@@ -5,21 +5,11 @@
       "static/chunks/main-app.js",
       "static/chunks/app/page.js"
     ],
-<<<<<<< HEAD
-    "/not-found": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/not-found.js"
-    ],
-=======
->>>>>>> c6926bc (Updated testimonial section UI)
     "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
-<<<<<<< HEAD
-=======
     ],
     "/template": [
       "static/chunks/webpack.js",
@@ -31,11 +21,20 @@
       "static/chunks/main-app.js",
       "static/chunks/app/not-found.js"
     ],
+    "/contact/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/contact/page.js"
+    ],
     "/about/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/about/page.js"
->>>>>>> c6926bc (Updated testimonial section UI)
+    ],
+    "/services/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/services/page.js"
     ]
   }
 }

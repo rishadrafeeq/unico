@@ -2,78 +2,38 @@
 
 import { motion } from 'framer-motion'
 import Button from './Button'
-<<<<<<< HEAD
-
-export default function Hero() {
-  return (
-    <section className="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-900 via-purple-900 to-black relative overflow-hidden pt-24 sm:pt-32 md:pt-40">
-      {/* Background overlay for texture */}
-      <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-=======
 import { ArrowUpRight } from 'lucide-react'
 
 export default function Hero() {
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16 sm:pt-20 md:pt-10 pb-12">
-      {/* Diagonal purple band and vignette to match reference */}
+      {/* Diagonal purple band and vignette */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute -left-1/4 bottom-0 w-[140%] h-64 rotate-[-8deg] blur-2xl opacity-50" style={{background:'linear-gradient(90deg, rgba(76,29,149,0.2) 0%, rgba(124,58,237,0.45) 50%, rgba(76,29,149,0.2) 100%)'}} />
         <div className="absolute inset-0" style={{background:'radial-gradient(1200px 600px at 50% -10%, rgba(124,58,237,0.18), rgba(2,6,23,0))'}} />
       </div>
->>>>>>> c6926bc (Updated testimonial section UI)
-      
-      {/* Floating background elements - simplified for better performance */}
+
+      {/* Floating background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div 
           className="absolute top-16 left-8 w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-purple-500 rounded-full opacity-20 blur-xl"
-          animate={{ 
-            y: [-20, 20, -20],
-            x: [-10, 10, -10],
-            scale: [1, 1.2, 1]
-          }}
-          transition={{ 
-            duration: 6, 
-            repeat: Infinity, 
-            ease: "easeInOut" 
-          }}
+          animate={{ y: [-20, 20, -20], x: [-10, 10, -10], scale: [1, 1.2, 1] }}
+          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div 
           className="absolute bottom-16 right-8 w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-blue-500 rounded-full opacity-20 blur-xl"
-          animate={{ 
-            y: [20, -20, 20],
-            x: [10, -10, 10],
-            scale: [1, 1.3, 1]
-          }}
-          transition={{ 
-            duration: 8, 
-            repeat: Infinity, 
-            ease: "easeInOut" 
-          }}
+          animate={{ y: [20, -20, 20], x: [10, -10, 10], scale: [1, 1.3, 1] }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div 
           className="absolute top-1/2 left-1/4 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-pink-500 rounded-full opacity-15 blur-lg"
-          animate={{ 
-            y: [-15, 15, -15],
-            scale: [1, 1.1, 1]
-          }}
-          transition={{ 
-            duration: 5, 
-            repeat: Infinity, 
-            ease: "easeInOut" 
-          }}
+          animate={{ y: [-15, 15, -15], scale: [1, 1.1, 1] }}
+          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
         />
       </div>
-      
+
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-<<<<<<< HEAD
-        <div className="text-center max-w-4xl mx-auto">
-          
-          {/* Main Heading */}
-          <motion.h1 
-            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 sm:mb-8 md:mb-10 leading-tight"
-=======
         <div className="text-center max-w-5xl mx-auto">
-          
           {/* Top Label */}
           <motion.div
             className="inline-flex items-center rounded-full border border-white/10 bg-black/40 px-4 py-2 text-xs sm:text-sm text-white/80 shadow-[0_0_40px_rgba(124,58,237,0.25)]"
@@ -87,42 +47,25 @@ export default function Hero() {
           {/* Main Heading */}
           <motion.h1 
             className="mt-3 sm:mt-4 text-1xl sm:text-xl md:text-5xl lg:text-7xl font-extrabold tracking-tight text-white mb-6 sm:mb-6 md:mb-10 leading-tight"
->>>>>>> c6926bc (Updated testimonial section UI)
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <motion.span
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-            >
-              Empowering Ambitions.
-            </motion.span>
+            <motion.span initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.5 }}>Empowering Ambitions.</motion.span>
             <br />
-            <motion.span
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.7 }}
-            >
-              Building Global Legacies
-            </motion.span>
+            <motion.span initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.7 }}>Building Global Legacies</motion.span>
           </motion.h1>
-          
+
           {/* Subtitle */}
           <motion.p 
-<<<<<<< HEAD
-            className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 mb-8 sm:mb-10 md:mb-12 leading-relaxed max-w-3xl mx-auto px-4"
-=======
             className="text-sm sm:text-base md:text-lg lg:text-xl text-white/70 mb-8 sm:mb-10 md:mb-12 leading-relaxed max-w-4xl mx-auto px-4"
->>>>>>> c6926bc (Updated testimonial section UI)
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             From software development and AI consulting to data insights, portfolio management, and interior design, we transform your vision into reality with innovative solutions across finance, healthcare, e-commerce, and technology industries.
           </motion.p>
-          
+
           {/* CTA Buttons */}
           <motion.div 
             className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center"
@@ -133,25 +76,15 @@ export default function Hero() {
             <Button 
               href="/services" 
               size="lg"
-<<<<<<< HEAD
-              className="w-full sm:w-auto bg-purple-600 hover:bg-purple-700 text-white py-3 px-6 sm:px-8 text-sm sm:text-base rounded-md transition-all duration-200"
-            >
-              Our Services →
-=======
               className="w-full sm:w-auto bg-gradient-to-tr from-purple-700 to-indigo-500 hover:from-purple-600 hover:to-indigo-500 text-white py-3 px-6 sm:px-8 text-sm sm:text-base rounded-lg transition-all duration-200 shadow-[0_10px_60px_rgba(124,58,237,0.35)]"
             >
               <span className="inline-flex items-center gap-2">Our Services <ArrowUpRight className="w-4 h-4" /></span>
->>>>>>> c6926bc (Updated testimonial section UI)
             </Button>
             <Button 
               href="/contact" 
               variant="outline" 
               size="lg"
-<<<<<<< HEAD
-              className="w-full sm:w-auto border border-gray-500 text-white hover:bg-gray-800 py-3 px-6 sm:px-8 text-sm sm:text-base rounded-md transition-all duration-200"
-=======
               className="w-full sm:w-auto border border-white/10 text-white/90 bg-black/40 hover:bg-white/5 py-3 px-6 sm:px-8 text-sm sm:text-base rounded-lg transition-all duration-200"
->>>>>>> c6926bc (Updated testimonial section UI)
             >
               See Plans
             </Button>
@@ -160,4 +93,4 @@ export default function Hero() {
       </div>
     </section>
   )
-} 
+}

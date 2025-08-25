@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import { Metadata } from 'next'
-import ServicesClient from './services/ServicesClient'
-
-export const metadata: Metadata = {
-  title: 'Our Services - Unico',
-  description: 'Comprehensive business solutions including software development, portfolio management, interior design, data insights, and AI consulting.',
-}
-
-export default function Services() {
-  return <ServicesClient />
-=======
 import AnimatedSection from '@/components/AnimatedSection'
 import ContactForm from '@/components/ContactForm'
 import CTA from '@/components/CTA'
@@ -20,7 +8,15 @@ import Services from '@/components/Services'
 import Testimonials from '@/components/Testimonials'
 import Vision from '@/components/Vision'
 import WhoWeAre from '@/components/WhoWeAre'
-import { bounceIn, fadeInLeft, fadeInRight, fadeInUp, rotateIn, slideInFromBottom, slideInFromTop } from '@/utils/animations'
+import { 
+  bounceIn, 
+  fadeInLeft, 
+  fadeInRight, 
+  fadeInUp, 
+  rotateIn, 
+  slideInFromBottom, 
+  slideInFromTop 
+} from '@/utils/animations'
 
 export default function Home() {
   return (
@@ -52,5 +48,4 @@ export default function Home() {
       </AnimatedSection>
     </main>
   )
->>>>>>> c6926bc (Updated testimonial section UI)
-} 
+}

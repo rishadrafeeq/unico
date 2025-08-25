@@ -54,14 +54,11 @@
 /******/ 	__webpack_require__.i = [];
 /******/ 	
 /************************************************************************/
-<<<<<<< HEAD
-=======
 /******/ 	/* webpack/runtime/amd options */
 /******/ 	(() => {
 /******/ 		__webpack_require__.amdO = {};
 /******/ 	})();
 /******/ 	
->>>>>>> c6926bc (Updated testimonial section UI)
 /******/ 	/* webpack/runtime/chunk loaded */
 /******/ 	(() => {
 /******/ 		var deferred = [];
@@ -134,11 +131,7 @@
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-<<<<<<< HEAD
-/******/ 		__webpack_require__.h = () => ("50cbe44361a32dd4")
-=======
 /******/ 		__webpack_require__.h = () => ("0c7055307aa58f96")
->>>>>>> c6926bc (Updated testimonial section UI)
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
@@ -183,10 +176,7 @@
 /******/ 					script.setAttribute("nonce", __webpack_require__.nc);
 /******/ 				}
 /******/ 				script.setAttribute("data-webpack", dataWebpackPrefix + key);
-<<<<<<< HEAD
-=======
 /******/ 		
->>>>>>> c6926bc (Updated testimonial section UI)
 /******/ 				script.src = url;
 /******/ 			}
 /******/ 			inProgress[url] = [done];
@@ -239,10 +229,6 @@
 /******/ 		var currentUpdateApplyHandlers;
 /******/ 		var queuedInvalidatedModules;
 /******/ 		
-<<<<<<< HEAD
-/******/ 		// eslint-disable-next-line no-unused-vars
-=======
->>>>>>> c6926bc (Updated testimonial section UI)
 /******/ 		__webpack_require__.hmrD = currentModuleData;
 /******/ 		
 /******/ 		__webpack_require__.i.push(function (options) {
@@ -303,13 +289,8 @@
 /******/ 					Object.defineProperty(fn, name, createPropertyDescriptor(name));
 /******/ 				}
 /******/ 			}
-<<<<<<< HEAD
-/******/ 			fn.e = function (chunkId) {
-/******/ 				return trackBlockingPromise(require.e(chunkId));
-=======
 /******/ 			fn.e = function (chunkId, fetchPriority) {
 /******/ 				return trackBlockingPromise(require.e(chunkId, fetchPriority));
->>>>>>> c6926bc (Updated testimonial section UI)
 /******/ 			};
 /******/ 			return fn;
 /******/ 		}
@@ -501,12 +482,7 @@
 /******/ 									updatedModules
 /******/ 								);
 /******/ 								return promises;
-<<<<<<< HEAD
-/******/ 							},
-/******/ 							[])
-=======
 /******/ 							}, [])
->>>>>>> c6926bc (Updated testimonial section UI)
 /******/ 						).then(function () {
 /******/ 							return waitForBlockingPromises(function () {
 /******/ 								if (applyOnUpdate) {

@@ -1,8 +1,6 @@
 {
   "/page": "app/page.js",
-<<<<<<< HEAD
-  "/not-found": "app/not-found.js"
-=======
+  "/services/page": "app/services/page.js",
+  "/contact/page": "app/contact/page.js",
   "/about/page": "app/about/page.js"
->>>>>>> c6926bc (Updated testimonial section UI)
 }
