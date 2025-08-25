@@ -1,0 +1,43 @@
+{
+<<<<<<< HEAD
+  "sortedMiddleware": [
+    "/"
+  ],
+=======
+  "version": 3,
+>>>>>>> c6926bc (Updated testimonial section UI)
+  "middleware": {
+    "/": {
+      "files": [
+        "server/edge-runtime-webpack.js",
+        "server/middleware.js"
+      ],
+      "name": "middleware",
+      "page": "/",
+      "matchers": [
+        {
+          "regexp": "^/.*$",
+          "originalSource": "/:path*"
+        }
+      ],
+      "wasm": [],
+<<<<<<< HEAD
+      "assets": []
+    }
+  },
+  "functions": {},
+  "version": 2
+=======
+      "assets": [],
+      "env": {
+        "__NEXT_BUILD_ID": "development",
+        "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "0vHEgRHvKekn80KyQ4g0eb6m0yZhH2ZirHficUEgoEM="
+      }
+    }
+  },
+  "functions": {},
+  "sortedMiddleware": [
+    "/"
+  ]
+>>>>>>> c6926bc (Updated testimonial section UI)
+}

@@ -1,0 +1,146 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+<<<<<<< HEAD
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+=======
+/* Using Next Font for Poppins; keep fallbacks only */
+
+@layer base {
+  :root {
+    --bg-primary: #000000; /* precise hero background */
+    --bg-elevated: #111218;
+    --accent-primary: #7c3aed;
+  }
+
+>>>>>>> c6926bc (Updated testimonial section UI)
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+  
+  body {
+<<<<<<< HEAD
+    font-family: 'Inter', system-ui, sans-serif;
+    overflow-x: hidden;
+    max-width: 100vw;
+=======
+    font-family: var(--font-family, 'Poppins'), system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji','Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji', sans-serif;
+    overflow-x: hidden;
+    max-width: 100vw;
+    background-color: var(--bg-primary);
+    color-scheme: dark;
+    color: #fff;
+>>>>>>> c6926bc (Updated testimonial section UI)
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.2;
+  }
+}
+
+@layer components {
+<<<<<<< HEAD
+=======
+  /* Hero typography scale to match Figma */
+  .hero-title {
+    @apply font-extrabold leading-tight text-white tracking-tight;
+  }
+  .hero-title-size {
+    font-size: 3rem;
+  }
+  @media (min-width: 640px) {
+    .hero-title-size { font-size: 4.5rem; }
+  }
+  @media (min-width: 768px) {
+    .hero-title-size { font-size: 5.5rem; }
+  }
+  @media (min-width: 1024px) {
+    .hero-title-size { font-size: 6rem; }
+  }
+
+  .hero-subtext { @apply text-white/70 leading-relaxed; }
+  .hero-subtext-size { font-size: 1rem; }
+  @media (min-width: 640px) {
+    .hero-subtext-size { font-size: 1.125rem; }
+  }
+  @media (min-width: 768px) {
+    .hero-subtext-size { font-size: 1.25rem; }
+  }
+  @media (min-width: 1024px) {
+    .hero-subtext-size { font-size: 1.375rem; }
+  }
+>>>>>>> c6926bc (Updated testimonial section UI)
+  .btn-primary {
+    @apply bg-primary-600 hover:bg-primary-700 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200;
+  }
+  
+  .btn-secondary {
+    @apply bg-white border border-gray-300 hover:bg-gray-50 text-gray-700 font-medium py-3 px-6 rounded-lg transition-colors duration-200;
+  }
+  
+  .section-padding {
+    @apply py-12 sm:py-16 md:py-20 lg:py-24 xl:py-28 2xl:py-32;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16;
+  }
+  
+  .container-wide {
+    @apply max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16;
+  }
+  
+  .container-narrow {
+    @apply max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12;
+  }
+  
+  .text-responsive-xl {
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl;
+  }
+  
+  .text-responsive-lg {
+    @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl;
+  }
+  
+  .text-responsive-md {
+    @apply text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl;
+  }
+  
+  .text-responsive-sm {
+    @apply text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl;
+  }
+  
+  .spacing-responsive {
+    @apply space-y-4 sm:space-y-6 md:space-y-8 lg:space-y-10 xl:space-y-12 2xl:space-y-16;
+  }
+  
+  .padding-responsive {
+    @apply p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12 2xl:p-16;
+  }
+  
+  .margin-responsive {
+    @apply m-4 sm:m-6 md:m-8 lg:m-10 xl:m-12 2xl:m-16;
+  }
+  
+  /* Prevent horizontal overflow */
+  .overflow-safe {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+  
+  /* Ensure absolute positioned elements don't cause overflow */
+  .absolute-overflow-safe {
+    position: absolute;
+    max-width: 100vw;
+    overflow: hidden;
+  }
+} 

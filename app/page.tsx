@@ -1,0 +1,56 @@
+<<<<<<< HEAD
+import { Metadata } from 'next'
+import ServicesClient from './services/ServicesClient'
+
+export const metadata: Metadata = {
+  title: 'Our Services - Unico',
+  description: 'Comprehensive business solutions including software development, portfolio management, interior design, data insights, and AI consulting.',
+}
+
+export default function Services() {
+  return <ServicesClient />
+=======
+import AnimatedSection from '@/components/AnimatedSection'
+import ContactForm from '@/components/ContactForm'
+import CTA from '@/components/CTA'
+import FAQ from '@/components/FAQ'
+import Features from '@/components/Features'
+import Hero from '@/components/Hero'
+import Services from '@/components/Services'
+import Testimonials from '@/components/Testimonials'
+import Vision from '@/components/Vision'
+import WhoWeAre from '@/components/WhoWeAre'
+import { bounceIn, fadeInLeft, fadeInRight, fadeInUp, rotateIn, slideInFromBottom, slideInFromTop } from '@/utils/animations'
+
+export default function Home() {
+  return (
+    <main>
+      <Hero />
+      <AnimatedSection variants={fadeInUp}>
+        <WhoWeAre />
+      </AnimatedSection>
+      <AnimatedSection variants={slideInFromTop}>
+        <Vision />
+      </AnimatedSection>
+      <AnimatedSection variants={fadeInRight}>
+        <Services />
+      </AnimatedSection>
+      <AnimatedSection variants={bounceIn}>
+        <Features />
+      </AnimatedSection>
+      <AnimatedSection variants={slideInFromBottom}>
+        <Testimonials />
+      </AnimatedSection>
+      <AnimatedSection variants={fadeInUp}>
+        <ContactForm />
+      </AnimatedSection>
+      <AnimatedSection variants={rotateIn}>
+        <FAQ />
+      </AnimatedSection>
+      <AnimatedSection variants={fadeInLeft}>
+        <CTA />
+      </AnimatedSection>
+    </main>
+  )
+>>>>>>> c6926bc (Updated testimonial section UI)
+} 

@@ -1,0 +1,8 @@
+{
+  "/page": "app/page.js",
+<<<<<<< HEAD
+  "/not-found": "app/not-found.js"
+=======
+  "/about/page": "app/about/page.js"
+>>>>>>> c6926bc (Updated testimonial section UI)
+}
