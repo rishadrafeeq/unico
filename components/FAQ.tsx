@@ -1,6 +1,8 @@
 'use client'
 
 import { useState } from 'react'
+import { ChevronDown } from 'lucide-react'
+import { motion, AnimatePresence } from 'framer-motion'
 
 const faqs = [
   {
@@ -33,55 +35,103 @@ export default function FAQ() {
   }
 
   return (
-    <section className="bg-black py-12 sm:py-16 md:py-20 lg:py-24 xl:py-28 2xl:py-32 3xl:py-36 4xl:py-40">
-      <div className="w-full max-w-none mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 3xl:px-20 4xl:px-24">
+    <section className="bg-black py-20 lg:py-28">
+      <div className="container-custom">
         
-        {/* Section Label */}
-        <div className="text-center mb-6 sm:mb-8 md:mb-10 lg:mb-12 xl:mb-14 2xl:mb-16">
-          <span className="bg-gray-800 text-gray-300 px-3 py-2 sm:px-4 sm:py-2 md:px-5 md:py-2.5 lg:px-6 lg:py-3 rounded-full text-sm sm:text-base md:text-lg font-medium">
+        {/* FAQs Button */}
+        <motion.div 
+          className="text-center mb-8"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <motion.span 
+            className="inline-flex rounded-full bg-gray-800 text-gray-300 px-4 py-2 text-sm font-medium cursor-pointer"
+            whileHover={{ 
+              scale: 1.05,
+              backgroundColor: "#374151"
+            }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ duration: 0.2 }}
+          >
             FAQs
-          </span>
-        </div>
+          </motion.span>
+        </motion.div>
         
-        {/* Main Heading */}
-        <div className="text-center mb-12 sm:mb-16 md:mb-20 lg:mb-24 xl:mb-28">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">
+        {/* Section Header */}
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
             We're here to help
           </h2>
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
             FAQs designed to provide the information you need.
           </p>
-        </div>
+        </motion.div>
         
         {/* FAQ Items */}
         <div className="max-w-4xl mx-auto space-y-4">
           {faqs.map((faq, index) => (
-            <div 
+            <motion.div 
               key={index}
-              className="bg-gray-900 border border-gray-800 rounded-2xl overflow-hidden"
+              className="bg-gray-900/50 border border-gray-800 rounded-xl overflow-hidden"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              whileHover={{ 
+                y: -2,
+                borderColor: "rgb(147, 51, 234, 0.3)",
+                boxShadow: "0 4px 20px rgba(147, 51, 234, 0.1)"
+              }}
             >
-              <button
+              <motion.button
                 onClick={() => toggleFAQ(index)}
-                className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-800 transition-colors"
+                className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-gray-800/50 transition-all duration-300"
+                whileHover={{ backgroundColor: "rgba(55, 65, 81, 0.5)" }}
+                whileTap={{ scale: 0.98 }}
               >
                 <span className="text-white font-medium text-lg">
                   {faq.question}
                 </span>
-                <div className={`transform transition-transform duration-200 ${openIndex === index ? 'rotate-180' : ''}`}>
-                  <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </div>
-              </button>
+                <motion.div
+                  animate={{ 
+                    rotate: openIndex === index ? 180 : 0,
+                    scale: openIndex === index ? 1.1 : 1
+                  }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <ChevronDown className="w-5 h-5 text-gray-400" />
+                </motion.div>
+              </motion.button>
               
-              {openIndex === index && (
-                <div className="px-6 pb-5">
-                  <p className="text-gray-300 leading-relaxed text-base">
-                    {faq.answer}
-                  </p>
-                </div>
-              )}
-            </div>
+              <AnimatePresence>
+                {openIndex === index && (
+                  <motion.div 
+                    className="px-6 pb-5"
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                  >
+                    <motion.p 
+                      className="text-gray-300 leading-relaxed text-base"
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.3, delay: 0.1 }}
+                    >
+                      {faq.answer}
+                    </motion.p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.div>
           ))}
         </div>
       </div>

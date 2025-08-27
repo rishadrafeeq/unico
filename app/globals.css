@@ -2,31 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  --foreground-rgb: 255, 255, 255;
+  --background-rgb: 10, 10, 10;
+  --primary-purple: 147, 51, 234;
+  --secondary-purple: 168, 85, 247;
+  --accent-purple: 196, 181, 253;
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: rgb(var(--background-rgb));
   font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
 }
 
 /* Custom scrollbar */
@@ -35,16 +26,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #1a1a1a;
+  background: #0a0a0a;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #4f46e5;
+  background: rgb(var(--primary-purple));
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #6366f1;
+  background: rgb(var(--secondary-purple));
 }
 
 /* Custom animations */
@@ -65,7 +56,7 @@ body {
 
 /* Gradient text utility */
 .gradient-text {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, rgb(var(--primary-purple)) 0%, rgb(var(--secondary-purple)) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -73,7 +64,7 @@ body {
 
 /* Glass morphism effect */
 .glass {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
@@ -95,4 +86,32 @@ body {
   .container-custom {
     padding: 0 4rem;
   }
+}
+
+/* UNICO specific styles */
+.text-gradient-purple {
+  background: linear-gradient(135deg, rgb(var(--primary-purple)) 0%, rgb(var(--secondary-purple)) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bg-purple-gradient {
+  background: linear-gradient(135deg, rgb(var(--primary-purple)) 0%, rgb(var(--secondary-purple)) 100%);
+}
+
+.border-purple {
+  border-color: rgb(var(--primary-purple));
+}
+
+.hover-purple:hover {
+  color: rgb(var(--primary-purple));
+}
+
+.bg-dark {
+  background-color: rgb(var(--background-rgb));
+}
+
+.text-white {
+  color: rgb(var(--foreground-rgb));
 }

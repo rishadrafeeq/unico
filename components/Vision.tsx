@@ -3,104 +3,156 @@
 import { motion } from "framer-motion"
 
 export default function Vision() {
+  const processes = [
+    {
+      title: "Discovery & Strategize",
+      description: "We align with your vision to craft tailored tech, design, or business strategies.",
+      graphic: (
+        <div className="relative w-full h-40 bg-gray-800 rounded-lg p-4 flex flex-col justify-between border border-white/10">
+          <div className="absolute top-2 left-2 flex space-x-1">
+            <span className="w-2 h-2 bg-red-500 rounded-full"></span>
+            <span className="w-2 h-2 bg-yellow-500 rounded-full"></span>
+            <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+          </div>
+          <div className="flex-grow flex items-center justify-center space-x-4 mt-4">
+            <div className="flex flex-col justify-end h-full w-1/2 p-2">
+              <div className="w-full h-1/3 bg-gray-600 rounded-sm mb-1"></div>
+              <div className="w-full h-2/3 bg-gray-500 rounded-sm mb-1"></div>
+              <div className="w-full h-full bg-gray-400 rounded-sm"></div>
+            </div>
+            <div className="relative w-1/2 h-full flex items-center justify-center">
+              <div className="relative w-24 h-24 rounded-full border-2 border-gray-500 flex items-center justify-center">
+                <div className="w-16 h-16 rounded-full border-2 border-gray-600 flex items-center justify-center">
+                  <div className="w-8 h-8 rounded-full bg-purple-500"></div>
+                </div>
+                <div className="absolute w-16 h-1 bg-blue-400 transform rotate-45 -translate-x-2 translate-y-2"></div>
+                <div className="absolute w-1 h-16 bg-blue-400 transform rotate-45 translate-x-2 -translate-y-2"></div>
+              </div>
+            </div>
+          </div>
+          <div className="mt-4 space-y-1">
+            <div className="h-2 bg-gray-700 rounded-sm w-3/4"></div>
+            <div className="h-2 bg-gray-700 rounded-sm w-1/2"></div>
+          </div>
+        </div>
+      )
+    },
+    {
+      title: "Design, Develop & Refine",
+      description: "We craft digital and interior solutions, refined through testing and creative iteration.",
+      graphic: (
+        <div className="relative w-full h-40 bg-gray-800 rounded-lg p-4 flex flex-col justify-between border border-white/10">
+          <div className="absolute top-2 left-2 flex space-x-1">
+            <span className="w-2 h-2 bg-red-500 rounded-full"></span>
+            <span className="w-2 h-2 bg-yellow-500 rounded-full"></span>
+            <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+          </div>
+          <div className="flex-grow flex items-center justify-center mt-4">
+            <div className="w-full h-full bg-gray-700 rounded-md"></div>
+          </div>
+        </div>
+      )
+    },
+    {
+      title: "Deliver & Elevate",
+      description: "We launch precisely and offer ongoing support to ensure lasting performance and growth.",
+      graphic: (
+        <div className="relative w-full h-40 bg-gray-800 rounded-lg p-4 flex flex-col justify-between border border-white/10">
+          <div className="absolute top-2 left-2 flex space-x-1">
+            <span className="w-2 h-2 bg-red-500 rounded-full"></span>
+            <span className="w-2 h-2 bg-yellow-500 rounded-full"></span>
+            <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+          </div>
+          <div className="flex-grow flex items-start justify-center space-x-4 mt-4">
+            <div className="w-1/2 h-full p-2 space-y-2">
+              <div className="flex items-center space-x-2 text-gray-400">
+                <span className="w-3 h-3 rounded-full border border-gray-500"></span>
+                <span>Security</span>
+              </div>
+              <div className="flex items-center space-x-2 text-white bg-gray-700 rounded-md p-1">
+                <span className="w-3 h-3 rounded-full bg-purple-500"></span>
+                <span>Efficiency</span>
+              </div>
+              <div className="flex items-center space-x-2 text-gray-400">
+                <span className="w-3 h-3 rounded-full border border-gray-500"></span>
+                <span>Speed</span>
+              </div>
+              <div className="flex items-center space-x-2 text-gray-400">
+                <span className="w-3 h-3 rounded-full border border-gray-500"></span>
+                <span>Accuracy</span>
+              </div>
+            </div>
+            <div className="w-1/2 h-full p-2 flex flex-col justify-start">
+              <span className="text-gray-400 text-sm mb-2">Status:</span>
+              <div className="text-gray-400 text-sm mb-1">Updating:</div>
+              <div className="w-full h-2 bg-gray-700 rounded-full">
+                <div className="h-full w-2/3 bg-purple-500 rounded-full"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )
+    }
+  ]
+
   return (
     <section className="bg-black py-20 lg:py-28">
-      <div className="container-custom">
-        
-        {/* Section Label */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Small label */}
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="mb-8 text-center"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-            Our Vision
-          </h2>
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            To revolutionize the digital landscape by empowering businesses with cutting-edge AI solutions that drive innovation and growth.
-          </p>
+          <span className="inline-flex rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/70">
+            Process
+          </span>
         </motion.div>
 
-        {/* Vision Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          
-          {/* Innovation Pillar */}
-          <motion.div
+        {/* Main content */}
+        <div className="text-center max-w-4xl mx-auto">
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-gray-900 to-black p-6 rounded-xl border border-gray-800 hover:border-purple-500/30 transition-colors duration-300"
+            className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight mb-4"
           >
-            <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mb-4">
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-              </svg>
-            </div>
-            <h3 className="text-xl font-semibold text-white mb-2">Innovation</h3>
-            <p className="text-gray-300">
-              Pioneering next-generation AI solutions that transform industries and create new possibilities.
-            </p>
-          </motion.div>
-
-          {/* Excellence Pillar */}
-          <motion.div
+            Empowering Vision, Delivering Impact
+          </motion.h2>
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-br from-gray-900 to-black p-6 rounded-xl border border-gray-800 hover:border-purple-500/30 transition-colors duration-300"
+            className="text-lg text-gray-300 mb-16"
           >
-            <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mb-4">
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
-            <h3 className="text-xl font-semibold text-white mb-2">Excellence</h3>
-            <p className="text-gray-300">
-              Delivering unparalleled quality and performance in every solution we create for our clients.
-            </p>
-          </motion.div>
-
-          {/* Growth Pillar */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-br from-gray-900 to-black p-6 rounded-xl border border-gray-800 hover:border-purple-500/30 transition-colors duration-300"
-          >
-            <div className="w-12 h-12 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center mb-4">
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-              </svg>
-            </div>
-            <h3 className="text-xl font-semibold text-white mb-2">Growth</h3>
-            <p className="text-gray-300">
-              Empowering businesses to scale new heights through strategic digital transformation.
-            </p>
-          </motion.div>
-
+            A streamlined, smart approach to tech, design, and business solutions.
+          </motion.p>
         </div>
 
-        {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          viewport={{ once: true }}
-          className="text-center mt-16"
-        >
-          <p className="text-lg text-gray-300 mb-6">
-            Ready to transform your business with AI?
-          </p>
-          <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
-            Start Your Journey
-          </button>
-        </motion.div>
-
+        <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-3">
+          {processes.map((process, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="relative rounded-xl border border-white/10 bg-gray-900 p-8 shadow-lg flex flex-col items-start" 
+            >
+              <div className="mb-6 w-full"> 
+                {process.graphic}
+              </div>
+              <h3 className="mb-3 text-xl font-semibold text-white mt-6"> 
+                {process.title}
+              </h3>
+              <p className="text-gray-400">{process.description}</p>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   )
