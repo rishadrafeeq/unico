@@ -6,7 +6,7 @@ import { ArrowUpRight } from 'lucide-react'
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 pb-12">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-400 pb-24">
       {/* Background gradient */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-black" />

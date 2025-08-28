@@ -1,12 +1,28 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
 export default function CTA() {
   return (
-    <section className="bg-black py-20 lg:py-28 text-center">
+    <section className="bg-black py-20 lg:py-28 text-center relative">
       <div className="container-custom max-w-4xl mx-auto">
-        
+
+        {/* Logo */}
+        <div className="flex justify-center mb-8">
+          <div className="relative">
+            {/* Glow Effect */}
+            <div className="absolute inset-0 bg-purple-700/30 blur-3xl rounded-full -z-10"></div>
+            <Image
+              src="/nav-icon.png"
+              alt="Unico Logo"
+              width={100}
+              height={40}
+              className="mx-auto"
+            />
+          </div>
+        </div>
+
         {/* Heading */}
         <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white leading-tight mb-6">
           Let's talk about <br /> your next big move
