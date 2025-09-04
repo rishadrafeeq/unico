@@ -41,7 +41,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body className={`${poppins.className} scroll-smooth`}>
         <Navbar />
-        <main className="pt-16 sm:pt-20 relative z-10">{children}</main>
+        <main className="pt-14 sm:pt-16 relative z-10">{children}</main>
         <CursorGlow />
         <Footer />
       </body>

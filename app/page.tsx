@@ -40,7 +40,7 @@ export default function Home() {
       <AnimatedSection variants={fadeInUp}>
         <ContactForm />
       </AnimatedSection>
-      <AnimatedSection variants={rotateIn}>
+      <AnimatedSection variants={fadeInUp}>
         <FAQ />
       </AnimatedSection>
       <AnimatedSection variants={fadeInLeft}>

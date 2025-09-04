@@ -36,7 +36,7 @@ export default function CTA() {
 
         {/* CTA Button */}
         <div className="mb-4">
-          <Link href="/contact">
+          <Link href="/#contact">
             <button className="bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white font-medium px-8 py-4 rounded-lg transition-all duration-200 inline-flex items-center space-x-2 shadow-lg">
               <span>Schedule a quick call</span>
               <ArrowUpRight className="w-5 h-5" />
