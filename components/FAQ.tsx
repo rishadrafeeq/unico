@@ -70,6 +70,11 @@ export default function FAQ() {
                 className="w-full px-4 sm:px-6 py-4 sm:py-5 text-left flex items-center justify-between hover:bg-gray-800/50 transition-all duration-300"
               >
                 <span className="text-white font-medium text-sm sm:text-lg pr-2">{faq.question}</span>
+                <ChevronDown 
+                  className={`w-5 h-5 text-white transition-transform duration-300 ${
+                    openIndex === index ? 'rotate-180' : ''
+                  }`} 
+                />
               </button>
 
               {/* Answer (no height/opacity animation) */}
