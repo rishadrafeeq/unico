@@ -8,8 +8,9 @@ import { ArrowUpRight } from 'lucide-react'
 
 const navigation = [
   { name: 'Home', href: '/' },
-  { name: 'About Us', href: '/about' },
+  { name: 'About Us', href: '/#who-we-are' },
   { name: 'Services', href: '/#services' },
+  { name: 'Industries', href: '/#vision' },
 ]
 
 export default function Navbar() {
@@ -18,35 +19,37 @@ export default function Navbar() {
 
   const isActive = (href: string) => {
     if (href === '/') return pathname === '/'
+    if (href === '/#who-we-are') return pathname === '/' || pathname === '/#who-we-are'
     if (href === '/#services') return pathname === '/' || pathname === '/#services'
+    if (href === '/#vision') return pathname === '/' || pathname === '/#vision'
     if (href === '/#contact') return pathname === '/' || pathname === '/#contact'
     return pathname.startsWith(href)
   }
 
   return (
-    <nav className="fixed left-0 right-0 top-0 z-50 bg-black/80 backdrop-blur-xl border-b border-white/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-14 sm:h-16">
+    <nav className="fixed left-0 right-0 top-0 z-50 bg-black">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
+          <Link href="/" className="flex items-center">
             <Image 
-              src="/nav-icon.png" 
+              src="/logo.png" 
               alt="UNICO Logo" 
               width={120} 
               height={40} 
               priority 
-              className="h-6 sm:h-8 w-auto" 
+              className="h-10 w-auto" 
             />
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
+          {/* Desktop Navigation - Centered */}
+          <div className="hidden md:flex items-center space-x-8 flex-1 justify-center">
             {navigation.map((item) => (
               <Link 
                 key={item.name} 
                 href={item.href} 
-                className={`font-medium transition-colors duration-200 text-sm lg:text-base ${
-                  isActive(item.href) ? 'text-white' : 'text-gray-300 hover:text-white'
+                className={`font-medium transition-colors duration-200 text-sm ${
+                  isActive(item.href) ? 'text-white font-semibold' : 'text-white hover:text-gray-300'
                 }`}
               >
                 {item.name}
@@ -58,14 +61,14 @@ export default function Navbar() {
           <div className="hidden md:flex items-center">
             <Link 
               href="/#contact" 
-              className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-purple-600 to-purple-700 px-3 sm:px-4 py-2 text-white text-sm font-medium hover:from-purple-700 hover:to-purple-800 transition-all duration-200 shadow-lg"
+              className="inline-flex items-center gap-1.5 rounded-md bg-purple-600 px-3 py-1.5 text-white text-sm font-medium hover:bg-purple-700 transition-all duration-200"
             >
-              Contact Us <ArrowUpRight className="w-4 h-4" />
+              Contact Us <ArrowUpRight className="w-3.5 h-3.5" />
             </Link>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="md:hidden ml-auto">
             <button 
               type="button" 
               className="text-gray-300 hover:text-white transition-colors duration-200 p-2 -mr-2"
@@ -86,14 +89,14 @@ export default function Navbar() {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="md:hidden border-t border-white/10 bg-black/95 backdrop-blur-xl">
+          <div className="md:hidden bg-black">
             <div className="px-2 pt-2 pb-4 space-y-1">
               {navigation.map((item) => (
                 <Link 
                   key={item.name} 
                   href={item.href} 
                   className={`block px-3 py-3 rounded-md text-base font-medium transition-colors duration-200 ${
-                    isActive(item.href) ? 'text-white bg-gray-800/50' : 'text-gray-300 hover:text-white hover:bg-gray-700/50'
+                    isActive(item.href) ? 'text-white bg-gray-800/50' : 'text-white hover:text-gray-300 hover:bg-gray-700/50'
                   }`} 
                   onClick={() => setMobileMenuOpen(false)}
                 >
@@ -103,7 +106,7 @@ export default function Navbar() {
               <div className="pt-2">
                 <Link 
                   href="/#contact" 
-                  className="block px-3 py-3 rounded-md text-base font-medium text-white bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 transition-all duration-200" 
+                  className="block px-3 py-3 rounded-md text-base font-medium text-white bg-purple-600 hover:bg-purple-700 transition-all duration-200" 
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Contact Us
